@@ -1,0 +1,101 @@
+/////////////////////////////////////////////
+// COLORS
+$color-primary-light: #75BAFD;
+$color-primary: #1E90FF;
+$color-primary-dark: #0169CE;
+
+$color-white: #ffffff;
+$color-gray-light: #c5c5c5;
+$color-gray-dark: #353535;
+$color-black: #262626;
+
+/////////////////////////////////////////////
+// RESET
+*{
+    margin: 0;
+    padding: 0; }
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; }
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px < 10/16 = 62.5
+
+    // @media only screen and (max-width: $bp-large){
+    //     font-size: 50%; // 8px < 8/16 = 50 }
+}
+
+/////////////////////////////////////////////
+// GLOBAL GENERIC SETTINGS
+body{
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: $color-gray-dark;
+}
+  
+
+/////////////////////////////////////////////
+// TYPOGRAPHY
+$type-base: 1.5rem;
+
+$heading-xxl: $type-base * 6.854;
+$heading-xl: $type-base * 4.236;
+$heading-l: $type-base * 2.618;
+$heading-m: $type-base * 1.618;
+
+/////////////////////////////////////////////
+// GRID & RELATED SPACING CLASSES
+
+// Grid Size & Column Size
+$grid-width: 114rem;
+$col_10-16: 67rem;
+$col_6-16: 39rem;
+$col_4-16: 25rem;
+$col_3-16: 18rem;
+
+// Break Points
+$bp-largest: 1120px;  
+$bp-large: 900px;
+$bp-medium: 600px;
+$bp-small: 380px;
+
+// $bp-large: 68.75em;    // 1100px
+// $bp-medium: 56.25em;   // 900px
+// $bp-small: 37.5em;     // 600px
+// $bp-smallest: 31.25em; // 500px
+
+// Margins
+$margin-xl: 12rem;
+$margin-l:  9rem;
+$margin-m:  6rem;
+$margin-s:  3rem;
+$margin-xs:  1.5rem;
+
+
+$radius: 3px;
+
+.wrapper {
+    max-width: $grid-width;
+    margin: auto;
+    padding: 0 2rem;
+    text-align: center;
+    //background-color: $color-white; 
+}
+
+section{
+    padding: $margin-xl 0;
+}
+
+/////////////////////////////////////////////
+// MIXINS
+
+@mixin center{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
